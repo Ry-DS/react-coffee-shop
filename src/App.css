@@ -1,3 +1,31 @@
+.welcome{
+  text-align: center;
+  margin-top: 5vh;
+  font-family: champagne__limousinesregular, sans-serif;
+}
+.overview{
+  border-bottom-right-radius: 25px;
+  border-top-right-radius: 25px;
+  background-image: radial-gradient(#5f9e5c, #0d841c);
+  padding: 20px;
+  height: 80vh;
+
+}
+.type-button{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG");
+}
+
+.selector{
+
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  background-image: radial-gradient(#9e7439, #483217);
+  padding: 20px;
+  height: 80vh;
+}
+.carousel-item{
+  height: 70vh;
+}
 .App {
   text-align: center;
 }
@@ -8,12 +36,12 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(5, 12, 29);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  display: flow;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   font-size: calc(10px + 2vmin);
   color: white;
 }
