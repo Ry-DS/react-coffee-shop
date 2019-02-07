@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import {Button} from 'primereact/button';
 import $ from 'jquery';
+
 import './App.css';
 
 class App extends Component {
     constructor(props){
         super(props);
         setTimeout(()=>{
-            $('.selector').carousel();
+
         },1);
 
     }

@@ -5,6 +5,7 @@ import './index.css';
 import './coffee.css'
 
 import 'bootstrap/dist/css/bootstrap.css';
+import Bootstrap from 'bootstrap';
 import './font/fonts.css';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
