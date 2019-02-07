@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import {Button} from 'primereact/button';
 import $ from 'jquery';
 import './App.css';
@@ -26,21 +25,38 @@ class App extends Component {
                      Carousel
                      <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                          <ol className="carousel-indicators">
-                             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
+                             <li data-target="#carouselExampleIndicators" data-slide-to="1"/>
+                             <li data-target="#carouselExampleIndicators" data-slide-to="2"/>
                          </ol>
                          <div className="carousel-inner">
                              <div className="carousel-item active">
-                                <Button label="This Type" className="p-button-secondary"/>
+                                 <div className="container">
+                                     <div className="row row-padding">
+                                         <div className="col-sm-6 button-padding-left"><Button label="This Type"
+                                                                                               className="p-button-secondary type-button"/>
+                                         </div>
+                                         <div className="col-sm-6 button-padding-right"><Button label="This Type"
+                                                                                                className="p-button-secondary type-button"/>
+                                         </div>
+                                     </div>
+                                     <div className="row row-padding">
+                                         <div className="col-sm-6 button-padding-left"><Button label="This Type"
+                                                                                               className="p-button-secondary type-button"/>
+                                         </div>
+                                         <div className="col-sm-6 button-padding-right"><Button label="This Type"
+                                                                                                className="p-button-secondary type-button"/>
+                                         </div>
+                                     </div>
+
+                                 </div>
+
                              </div>
                              <div className="carousel-item">
                                  <Button label="This Milk" className="p-button-secondary"/>
                              </div>
                              <div className="carousel-item">
-                                 <Button label="This Size" className="p-button-secondary">
-                                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/1200px-A_small_cup_of_coffee.JPG"/>
-                                 </Button>
+                                 <Button label="This Size" className="p-button-secondary type-button"/>
                              </div>
                          </div>
                          <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
