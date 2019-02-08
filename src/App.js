@@ -7,9 +7,8 @@ import './App.css';
 class App extends Component {
     constructor(props){
         super(props);
-        setTimeout(()=>{
+        this.coffeeType = ''
 
-        },1);
 
     }
   render() {
@@ -20,15 +19,28 @@ class App extends Component {
          </div>
          <div className="container-fluid">
              <div className="row">
-                 <div className="col-sm-3 text-center overview">Selections</div>
+                 <div className="col-sm-3 text-center overview">Selections
+
+                     <div className="saucer">
+                         <div className="inner"></div>
+                         <div className="cup">
+                             <div className="coffee">
+                                 <div className="shine"></div>
+                                 <div className="shine left"></div>
+                                 <div className="foam"></div>
+                             </div>
+                             <div className="holder"></div>
+                         </div>
+                     </div>
+                 </div>
 
                  <div className="col-sm-7 offset-sm-2 text-center selector">
                      Carousel
-                     <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                     <div id="chooserCarousel" className="carousel slide" data-ride="carousel">
                          <ol className="carousel-indicators">
-                             <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
-                             <li data-target="#carouselExampleIndicators" data-slide-to="1"/>
-                             <li data-target="#carouselExampleIndicators" data-slide-to="2"/>
+                             <li data-target="#chooserCarousel" data-slide-to="0" className="active"/>
+                             <li data-target="#chooserCarousel" data-slide-to="1"/>
+                             <li data-target="#chooserCarousel" data-slide-to="2"/>
                          </ol>
                          <div className="carousel-inner">
                              <div className="carousel-item active">
@@ -60,12 +72,12 @@ class App extends Component {
                                  <Button label="This Size" className="p-button-secondary type-button"/>
                              </div>
                          </div>
-                         <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                         <a className="carousel-control-prev" href="#chooserCarousel" role="button"
                             data-slide="prev">
                              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                              <span className="sr-only">Previous</span>
                          </a>
-                         <a className="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                         <a className="carousel-control-next" href="#chooserCarousel" role="button"
                             data-slide="next">
                              <span className="carousel-control-next-icon" aria-hidden="true"></span>
                              <span className="sr-only">Next</span>
@@ -82,6 +94,7 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
 /*<div className="App">
