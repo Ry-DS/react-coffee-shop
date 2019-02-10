@@ -36,56 +36,50 @@ class App extends Component {
 
                  <div className="col-sm-7 offset-sm-2 text-center selector">
                      Carousel
-                     <div id="myCarousel" className="carousel slide">
+                     <div id="chooserCarousel" className="carousel slide" data-ride="carousel">
                          <ol className="carousel-indicators">
-                             <li className="item1 active"></li>
-                             <li className="item2"></li>
-                             <li className="item3"></li>
-                             <li className="item4"></li>
+                             <li data-target="#chooserCarousel" data-slide-to="0" className="active"/>
+                             <li data-target="#chooserCarousel" data-slide-to="1"/>
+                             <li data-target="#chooserCarousel" data-slide-to="2"/>
                          </ol>
-
-                         <div className="carousel-inner" role="listbox">
-
-                             <div className="item active">
-                                 <img src="img_chania.jpg" alt="Chania" width="460" height="345"/>
-                                 <div className="carousel-caption">
-                                     <h3>Chania</h3>
-                                     <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
-                                 </div>
-                             </div>
-
-                             <div className="item">
-                                 <img src="img_chania2.jpg" alt="Chania" width="460" height="345"/>
-                                 <div className="carousel-caption">
-                                     <h3>Chania</h3>
-                                     <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+                         <div className="carousel-inner">
+                             <div className="carousel-item active">
+                                 <div className="container">
+                                     <div className="row row-padding">
+                                         <div className="col-sm-6 button-padding-left"><Button label="This Type"
+                                                                                               className="p-button-secondary type-button"/>
+                                         </div>
+                                         <div className="col-sm-6 button-padding-right"><Button label="This Type"
+                                                                                                className="p-button-secondary type-button"/>
+                                         </div>
                                      </div>
-                             </div>
-
-                             <div className="item">
-                                 <img src="img_flower.jpg" alt="Flower" width="460" height="345"/>
-                                 <div className="carousel-caption">
-                                     <h3>Flowers</h3>
-                                     <p>Beautiful flowers in Kolymbari, Crete.</p>
+                                     <div className="row row-padding">
+                                         <div className="col-sm-6 button-padding-left"><Button label="This Type"
+                                                                                               className="p-button-secondary type-button"/>
+                                         </div>
+                                         <div className="col-sm-6 button-padding-right"><Button label="This Type"
+                                                                                                className="p-button-secondary type-button"/>
+                                         </div>
                                      </div>
-                             </div>
 
-                             <div className="item">
-                                 <img src="img_flower2.jpg" alt="Flower" width="460" height="345"/>
-                                 <div className="carousel-caption">
-                                     <h3>Flowers</h3>
-                                     <p>Beautiful flowers in Kolymbari, Crete.</p>
                                  </div>
-                             </div>
 
+                             </div>
+                             <div className="carousel-item">
+                                 <Button label="This Milk" className="p-button-secondary"/>
+                             </div>
+                             <div className="carousel-item">
+                                 <Button label="This Size" className="p-button-secondary type-button"/>
+                             </div>
                          </div>
-
-                         <a className="left carousel-control" href="#myCarousel" role="button">
-                             <span className="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                         <a className="carousel-control-prev" href="#chooserCarousel" role="button"
+                            data-slide="prev">
+                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                              <span className="sr-only">Previous</span>
                          </a>
-                         <a className="right carousel-control" href="#myCarousel" role="button">
-                             <span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                         <a className="carousel-control-next" href="#chooserCarousel" role="button"
+                            data-slide="next">
+                             <span className="carousel-control-next-icon" aria-hidden="true"></span>
                              <span className="sr-only">Next</span>
                          </a>
                      </div>
