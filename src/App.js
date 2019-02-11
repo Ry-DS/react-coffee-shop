@@ -8,8 +8,7 @@ import './App.css';
 class App extends Component {
     constructor(props){
         super(props);
-        this.state = {order: []};
-        this.state.order['type'] = 'Latte';
+        this.state = {order: {type: 'Latte'}};
         this.prices = {
             type: {flat_white: 2.5, cappuccino: 3, short_black: 2, latte: 3},
             milk: {full_cream_milk: 0, skim_milk: 0.5, soy_milk: 1},
@@ -26,7 +25,7 @@ class App extends Component {
     }
 
     handleButtonClick(type, value) {
-        const order = this.state.order.slice();
+        const order = {...this.state.order};
         order[type] = value;
         this.setState({...this.state, order: order})
 
@@ -43,7 +42,8 @@ class App extends Component {
              <div className="row">
                  <div className="col-sm-3 text-center overview">Selections
                      <div className="selections-text">
-                         <h4 className="welcome">{type !== undefined ? "Type: " + type : ""}</h4>
+                         <h4 className="selector-text">{type !== undefined ? "Type: " + type.replaceAll("_", " ") : ""}</h4>
+                         <h4 className="selector-text">{milk !== undefined ? "Milk: " + milk.replaceAll("_", " ") : ""}</h4>
                      </div>
                      <div className="coffee-container text-center">
                      <div className="saucer">
@@ -72,7 +72,7 @@ class App extends Component {
                          </ol>
                          <div className="carousel-inner">
                              <div className="carousel-item active">
-                                 <h1 className="welcome text-center" style={{color: 'white'}}>Choose a Type</h1>
+                                 <h1 className="selector-text text-center" style={{color: 'white'}}>Choose a Type</h1>
                                  <div className="container">
                                      <div className="row row-padding">
                                          <div className="col-sm-6 button-padding-left"><Button label="Flat White"
@@ -100,7 +100,7 @@ class App extends Component {
                              </div>
                              <div className="carousel-item">
                                  <div className="container">
-                                     <h1 className="welcome text-center" style={{color: 'white'}}>Choose a Milk
+                                     <h1 className="selector-text text-center" style={{color: 'white'}}>Choose a Milk
                                          Type</h1>
                                      <div className="row row-padding">
                                          <div className="col-sm-6 button-padding-left"><Button label="Full Cream Milk"

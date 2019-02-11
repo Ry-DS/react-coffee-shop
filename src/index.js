@@ -14,7 +14,12 @@ import 'primeicons/primeicons.css';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';
-
+//begin util
+String.prototype.replaceAll = function (search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+//end util
 ReactDOM.render(<App />, document.getElementById('root'));
 
 
