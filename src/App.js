@@ -4,11 +4,24 @@ import $ from 'jquery';
 
 import './App.css';
 
+let carousel;
+
 class App extends Component {
     constructor(props){
         super(props);
-        this.coffeeType = ''
+        this.state = {data: []};
+        setTimeout(() => {
+            $('#chooserCarousel').carousel({interval: false, keyboard: false});
+        }, 50);
 
+
+
+    }
+
+    handleButtonClick(type, value) {
+        const data = this.state.data.slice();
+        data[type] = value;
+        this.setState({...this.state, data: data})
 
     }
   render() {
@@ -20,7 +33,7 @@ class App extends Component {
          <div className="container-fluid">
              <div className="row">
                  <div className="col-sm-3 text-center overview">Selections
-
+                     <h4>{this.state.data}</h4>
                      <div className="saucer">
                          <div className="inner"></div>
                          <div className="cup">
@@ -36,7 +49,7 @@ class App extends Component {
 
                  <div className="col-sm-7 offset-sm-2 text-center selector">
                      Carousel
-                     <div id="chooserCarousel" className="carousel slide" data-ride="carousel">
+                     <div id="chooserCarousel" className="carousel slide">
                          <ol className="carousel-indicators">
                              <li data-target="#chooserCarousel" data-slide-to="0" className="active"/>
                              <li data-target="#chooserCarousel" data-slide-to="1"/>
@@ -47,17 +60,21 @@ class App extends Component {
                                  <div className="container">
                                      <div className="row row-padding">
                                          <div className="col-sm-6 button-padding-left"><Button label="This Type"
+                                                                                               onClick={() => this.handleButtonClick('type', 'expresso')}
                                                                                                className="p-button-secondary type-button"/>
                                          </div>
                                          <div className="col-sm-6 button-padding-right"><Button label="This Type"
+                                                                                                onClick={() => this.handleButtonClick('type', 'Coffee 2.0')}
                                                                                                 className="p-button-secondary type-button"/>
                                          </div>
                                      </div>
                                      <div className="row row-padding">
                                          <div className="col-sm-6 button-padding-left"><Button label="This Type"
+                                                                                               onClick={() => this.handleButtonClick('type', 'Hot Chocolate')}
                                                                                                className="p-button-secondary type-button"/>
                                          </div>
                                          <div className="col-sm-6 button-padding-right"><Button label="This Type"
+                                                                                                onClick={() => this.handleButtonClick('type', 'Long Black')}
                                                                                                 className="p-button-secondary type-button"/>
                                          </div>
                                      </div>
