@@ -4,7 +4,6 @@ import $ from 'jquery';
 
 import './App.css';
 
-let carousel;
 
 class App extends Component {
     constructor(props){
@@ -25,19 +24,25 @@ class App extends Component {
 
     }
   render() {
+      const type = this.state.data['type'];
     return (
      <div>
          <div className="welcome">
-            <h1>Welcome</h1>
+             <h1>Welcome to Fred's Cafe</h1>
          </div>
          <div className="container-fluid">
              <div className="row">
                  <div className="col-sm-3 text-center overview">Selections
-                     <h4>{this.state.data}</h4>
+                     <div className="selections-text">
+                         <h4>{type !== undefined ? "Type: " + type : ""}</h4>
+                     </div>
+                     <div className="coffee-container text-center">
                      <div className="saucer">
                          <div className="inner"></div>
                          <div className="cup">
-                             <div className="coffee">
+                             <div className={type === undefined ? "empty" : "coffee " + type.toLowerCase()}>
+                                 <div
+                                     className={type !== undefined && type.includes("Hot-Chocolate") ? "marshmallow" : ""}/>
                                  <div className="shine"></div>
                                  <div className="shine left"></div>
                                  <div className="foam"></div>
@@ -45,10 +50,11 @@ class App extends Component {
                              <div className="holder"></div>
                          </div>
                      </div>
+                     </div>
                  </div>
 
                  <div className="col-sm-7 offset-sm-2 text-center selector">
-                     Carousel
+
                      <div id="chooserCarousel" className="carousel slide">
                          <ol className="carousel-indicators">
                              <li data-target="#chooserCarousel" data-slide-to="0" className="active"/>
@@ -59,22 +65,22 @@ class App extends Component {
                              <div className="carousel-item active">
                                  <div className="container">
                                      <div className="row row-padding">
-                                         <div className="col-sm-6 button-padding-left"><Button label="This Type"
-                                                                                               onClick={() => this.handleButtonClick('type', 'expresso')}
+                                         <div className="col-sm-6 button-padding-left"><Button label="Americano"
+                                                                                               onClick={() => this.handleButtonClick('type', 'Americano')}
                                                                                                className="p-button-secondary type-button"/>
                                          </div>
-                                         <div className="col-sm-6 button-padding-right"><Button label="This Type"
-                                                                                                onClick={() => this.handleButtonClick('type', 'Coffee 2.0')}
+                                         <div className="col-sm-6 button-padding-right"><Button label="Latte"
+                                                                                                onClick={() => this.handleButtonClick('type', 'Latte')}
                                                                                                 className="p-button-secondary type-button"/>
                                          </div>
                                      </div>
                                      <div className="row row-padding">
-                                         <div className="col-sm-6 button-padding-left"><Button label="This Type"
-                                                                                               onClick={() => this.handleButtonClick('type', 'Hot Chocolate')}
+                                         <div className="col-sm-6 button-padding-left"><Button label="Hot Chocolate"
+                                                                                               onClick={() => this.handleButtonClick('type', 'Hot-Chocolate')}
                                                                                                className="p-button-secondary type-button"/>
                                          </div>
-                                         <div className="col-sm-6 button-padding-right"><Button label="This Type"
-                                                                                                onClick={() => this.handleButtonClick('type', 'Long Black')}
+                                         <div className="col-sm-6 button-padding-right"><Button label="Water"
+                                                                                                onClick={() => this.handleButtonClick('type', 'Water')}
                                                                                                 className="p-button-secondary type-button"/>
                                          </div>
                                      </div>
