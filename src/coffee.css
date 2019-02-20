@@ -68,11 +68,11 @@
     width: 100px;
     height: 100px;
     border-radius: 100%;
-    background-color: #685044;
+    background-color: #c29948;
     box-shadow: inset 0 0 10px #000;
 }
 
-.short_black {
+.cappuccino {
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -91,6 +91,28 @@
     box-shadow: inset 0 0 10px #dcdcdc;
 }
 
+.sugar1 {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 25px;
+    width: 15px;
+    height: 15px;
+    background-color: #FFFFFF;
+    box-shadow: inset 0 0 10px #dcdcdc;
+    transform: rotate(20deg);
+}
+
+.sugar2 {
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 55px;
+    width: 15px;
+    height: 15px;
+    background-color: #FFFFFF;
+    box-shadow: inset 0 0 10px #dcdcdc;
+    transform: rotate(70deg);
+}
+
 
 .latte {
     background-color: #C3B299;
@@ -99,9 +121,9 @@
     border-radius: 100%;
 }
 
-.cappuccino {
+.short_black {
 
-    background-color: #FC9E4F;
+    background-color: #954e27;
 }
 
 .water {

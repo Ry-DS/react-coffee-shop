@@ -11,7 +11,7 @@ import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 // eslint-disable-next-line
-import App from './App';
+import App from './js/App';
 
 import * as serviceWorker from './serviceWorker';
 //begin util
