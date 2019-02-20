@@ -12,7 +12,14 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {order: {type: PRICES.type.latte, milk: undefined, size: undefined, sugar: undefined}};//we put a default order so the coffee mug can render properly
+        this.state = {
+            order: {
+                type: PRICES.type.latte,
+                milk: PRICES.milk.full_cream_milk,
+                size: PRICES.size.regular,
+                sugar: PRICES.sugar.none
+            }
+        };//we put a default order so the coffee mug can render properly
 
         setTimeout(() => {//we do this on a delay since bootstrap might have not loaded by now
             $('#chooserCarousel').carousel({interval: false, keyboard: false});

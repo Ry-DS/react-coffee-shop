@@ -13,13 +13,11 @@ function Selections(props) {
         entries.push(<h4 className="selector-text"
                          key={i}>{order[key] !== undefined ? PRICES[key].name + ": " + order[key].name : ""}</h4>);
     }
-    return (<div>Selections
+    return (<div>
         <div className="selections-text">
             {entries}
         </div>
-        <div className="coffee-container text-center">
             <Coffee state={props.state}/>
-        </div>
     </div>);
 }
 
