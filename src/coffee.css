@@ -64,7 +64,7 @@
     border-radius: 100%;
 }
 
-.americano {
+.flat_white {
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -72,7 +72,7 @@
     box-shadow: inset 0 0 10px #000;
 }
 
-.hot_chocolate {
+.short_black {
     width: 100px;
     height: 100px;
     border-radius: 100%;
@@ -99,7 +99,7 @@
     border-radius: 100%;
 }
 
-.cappu {
+.cappuccino {
 
     background-color: #FC9E4F;
 }
