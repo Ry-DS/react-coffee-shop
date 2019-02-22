@@ -7,17 +7,21 @@ function Selections(props) {
     let order = props.state.order;
 
     let keys = Object.keys(order);
-
+    let finalPrice = 0;
     for (let i = 0; i < keys.length; i++) {
         let key = keys[i];
         entries.push(<h4 className="selector-text"
-                         key={i}>{order[key] !== undefined ? PRICES[key].name + ": " + order[key].name : ""}</h4>);
+                         key={i}>{order[key] !== undefined ? PRICES[key].name + ": " + order[key].name : ""}</h4>)
+        finalPrice += order[key].price;
     }
     return (<div>
+        <Coffee state={props.state}/>
         <div className="selections-text">
             {entries}
         </div>
-            <Coffee state={props.state}/>
+        <div className="selector-text">{"Final Price: $" + finalPrice.toFixed(2)}</div>
+
+
     </div>);
 }
 

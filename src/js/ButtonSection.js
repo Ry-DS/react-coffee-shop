@@ -23,9 +23,9 @@ class ButtonSection extends Component {
             } else entry = rows[rows.length - 1];
             let buttonData = this.data[keys[i]];
             entry.push(<div key={i} className={"col-sm-6 button-padding-" + (!isOdd(i) ? "right" : "left")}><Button
-                    label={buttonData.name}
-                    onClick={() => this.onClick(buttonData.code)}
-                    className={(this.props.selected === buttonData ? "p-button-success" : "p-button-secondary") + " type-button"}/>
+                label={buttonData.name + " - $" + buttonData.price.toFixed(2)}
+                onClick={() => this.onClick(buttonData.code)}
+                className={(this.props.selected === buttonData ? "p-button-success" : "p-button-secondary") + " type-button"}/>
                 </div>
             );
             rows[rows.length - 1] = entry;
